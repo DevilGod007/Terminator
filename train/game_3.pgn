@@ -1,9 +1,0 @@
-[Event "Pygame Chess Game"]
-[Site "Local"]
-[Date "????.??.??"]
-[Round "1"]
-[White "Player"]
-[Black "AI"]
-[Result "*"]
-
-1. e4 d5 2. Nf3 e6 3. exd5 Nd7 4. dxe6 fxe6 5. d3 Be7 6. g3 Nh6 7. Bg2 O-O 8. O-O b5 9. Bxh6 c5 10. Nh4 Qb6 11. Qg4 Ne5 12. Qxg7# *
