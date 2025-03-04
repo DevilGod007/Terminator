@@ -4,7 +4,7 @@ import tkinter as tk
 from tkinter import messagebox
 
 # Virtual environment Python path
-VENV_PYTHON = r"d:/prjct code/Tink-Her-hack-3.0/venv/Scripts/python.exe"
+VENV_PYTHON = os.path.join(os.getcwd(), "venv", "Scripts", "python.exe")
 
 # Function to run the chess game and train afterward
 def run_custom_game():
