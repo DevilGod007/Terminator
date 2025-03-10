@@ -1,10 +1,4 @@
 pygame
 chess
-os
-chess.pgn
-random
-subprocess
-tkinter
-sys
 numpy
 tensorflow
