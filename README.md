@@ -1,4 +1,4 @@
-# Chess Game with Lc0 and PyQt
+# Chess Game with custom engine based on lco and stockfish and PyQt
 
 This project is a chess game built with Python using PyQt for the GUI and Lc0 (Leela Chess Zero) as the AI engine. The game also includes AI logic implemented in Python and supports game storage in `.pgn` format for training a neural network model (`.h5`).
 
