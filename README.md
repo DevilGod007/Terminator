@@ -41,5 +41,5 @@ Feel free to contribute by submitting issues and pull requests.
 This project is open-source and available under the MIT License.
 
 ---
-Developed by Adithya J Menon,Aiswarya Shine
+Developed by Adithya J Menon,Aiswarya Shine,Afrin Fathima,Alan P
 
