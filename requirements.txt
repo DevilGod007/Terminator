@@ -1,0 +1,8 @@
+pygame
+chess
+numpy
+tensorflow
+kivy
+matplotlib
+seaborn
+scikit-learn
