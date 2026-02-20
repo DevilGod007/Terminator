@@ -1,121 +1,106 @@
-# Chess AI - Reinforcement Learning Conversion
+♟️ Self Learning Chess Engine
+🧠 Description
 
-## Overview
-Your chess engine has been converted from **Supervised Learning** to **Reinforcement Learning**!
+Self Learning Chess Engine is a Reinforcement Learning–based Chess AI that improves by learning from gameplay outcomes.
 
-## Key Changes Made
+The engine uses:
 
-### 1. New RL Training File: `train_rl.py`
-- **RLChessAgent class**: Implements Q-learning with experience replay
-- **Exploration vs Exploitation**: Uses epsilon-greedy strategy
-- **Game outcome learning**: Learns from wins/losses/draws instead of move numbers
-- **Self-play capability**: Can train by playing against itself
+Reinforcement Learning (Q-Learning)
 
-### 2. Updated Engine: `engine.py`
-- Added exploration during gameplay (optional)
-- Now interprets neural network outputs as Q-values
-- Better move selection based on value estimates
+Neural Networks (TensorFlow / Keras)
 
-### 3. Enhanced Game Saving: `custom_game.py`
-- Properly saves game results (1-0, 0-1, 1/2-1/2) for RL training
-- Results are used as reward signals
+python-chess for board logic
 
-### 4. Updated GUI: `kvgui.py`
-- Now calls RL training instead of supervised training
-- Seamless integration with new training method
+Kivy GUI for interactive gameplay
 
-## How Reinforcement Learning Works
+The AI learns from:
 
-### Before (Supervised Learning):
-```python
-# Learned from move patterns
-evaluation = board.fullmove_number  # Simple heuristic
-model.fit(board_positions, evaluations)
-```
+Human vs AI games
 
-### After (Reinforcement Learning):
-```python
-# Learns from game outcomes
-if game_result == "1-0":
-    reward = 1.0    # Win
-elif game_result == "0-1":
-    reward = -1.0   # Loss
-else:
-    reward = 0.0    # Draw
+Self-play training
 
-# Updates Q-values based on rewards
-agent.update_policy(game_moves, reward)
-```
+Win / Loss / Draw results
 
-## Training Options
+Over time, the engine improves its move selection using reward-based learning.
 
+📦 Installation
+1️⃣ Clone the Repository
+git clone <your-repo-url>
+cd Terminator
+2️⃣ Install Requirements
 
-## Key RL Concepts Implemented
+Install all dependencies from requirements.txt:
 
-### 1. **Q-Learning**
-- Neural network predicts Q-values (expected future rewards)
-- Updates based on actual game outcomes
+pip install -r requirements.txt
 
-### 2. **Experience Replay**
-- Stores game experiences in memory buffer
-- Trains on random batches for stability
+Make sure you are using Python 3.10 – 3.12.
 
-### 3. **Epsilon-Greedy Exploration**
-- 90% exploitation (use best known moves)
-- 10% exploration (try random moves)
-- Epsilon decays over time
+▶️ Running the Application
 
-### 4. **Reward Discounting**
-- Future rewards are discounted by gamma (0.95)
-- Moves closer to game end have higher impact
+After installing dependencies, run either:
 
-## Model Architecture
+python kvgui.py
 
-```python
-# RL Neural Network
-Sequential([
-    Dense(128, activation="relu"),  # Input layer
-    Dense(64, activation="relu"),   # Hidden layer
-    Dense(32, activation="relu"),   # Hidden layer  
-    Dense(1, activation="linear")   # Q-value output
-])
-```
+OR
 
-## Training Process
+python menu_gui.py
+🛠️ First Time Setup (IMPORTANT)
 
-1. **Play Games**: AI plays games (against human or itself)
-2. **Store Experiences**: Each move and outcome is stored
-3. **Sample Batch**: Random batch of experiences selected
-4. **Calculate Targets**: Q-values updated based on rewards
-5. **Train Network**: Neural network learns from batch
-6. **Repeat**: Process continues with new games
+When the GUI opens:
 
-## Performance Improvements
+Click on "Setup"
 
-With RL training, your chess engine now:
-- ✅ **Learns from actual game outcomes**
-- ✅ **Explores new strategies**
-- ✅ **Adapts to opponent patterns**
-- ✅ **Improves through self-play**
-- ✅ **Uses proper reward signals**
+Allow the environment setup to complete
 
+Then start playing or training
 
-## Files Overview
+The setup initializes:
 
-| File | Purpose | Type |
-|------|---------|------|
-| `train_rl.py` | RL training implementation | New |
-| `train_custom.py` | Original supervised learning | Original |
-| `engine.py` | Chess engine with RL support | Updated |
-| `custom_game.py` | Game interface with proper results | Updated |
-| `kvgui.py` | GUI with RL training | Updated |
-| `train_selector.py` | Choose training method | New |
+Model structure
 
-## Usage
+Training environment
 
-1. **Play games**: Use the GUI to play against AI
-2. **Train with RL**: Games automatically trigger RL training
-3. **Self-play**: Run `train_rl.py` for advanced training
-4. **Compare**: You can still use supervised learning if needed
+Required folders
 
+Initial model files
 
+📁 Project Structure
+Terminator/
+│
+├── images/
+├── train/
+├── engine.py
+├── custom_game.py
+├── train_rl.py
+├── train_custom.py
+├── train_model.py
+├── train_selector.py
+├── kvgui.py
+├── menu_gui.py
+├── requirements.txt
+└── README.md
+🔁 Training Modes
+
+The engine supports:
+
+Reinforcement Learning training
+
+Self-play training
+
+Supervised learning (legacy support)
+
+Games are saved in the train/ directory and used for learning.
+
+🚀 Features
+
+♟️ Interactive Chess GUI (Kivy)
+
+🧠 Reinforcement Learning with Q-values
+
+🔁 Experience Replay
+
+🎯 Reward-based training
+
+📊 Model inspection utilities
+
+📈 Confusion matrix & evaluation tools
