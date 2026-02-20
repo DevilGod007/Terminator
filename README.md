@@ -17,7 +17,7 @@ The AI learns from:
 - Win / Loss / Draw outcomes  
 
 Over time, the engine improves its move selection using reward-based learning.
-
+note:do not use venv for this project
 ---
 
 ## 📦 Installation
@@ -27,3 +27,8 @@ Over time, the engine improves its move selection using reward-based learning.
 ```bash
 git clone https://github.com/your-username/self-learning-chess-engine.git
 cd self-learning-chess-engine
+pip install -r requirements.txt
+python kvgui.py
+or
+python menu_gui.py
+
