@@ -49,23 +49,6 @@ agent.update_policy(game_moves, reward)
 
 ## Training Options
 
-### Option 1: Train from Existing Games
-```bash
-python train_rl.py
-# Choose option 1
-```
-- Uses games you've already played
-- Learns from human vs AI games
-- Faster initial training
-
-### Option 2: Self-Play Training
-```bash
-python train_rl.py
-# Choose option 2
-```
-- AI plays against itself
-- Discovers new strategies
-- More advanced training method
 
 ## Key RL Concepts Implemented
 
