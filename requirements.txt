@@ -1,8 +1,9 @@
 pygame
-chess
+python-chess
 numpy
 tensorflow
 kivy
 matplotlib
 seaborn
 scikit-learn
+
