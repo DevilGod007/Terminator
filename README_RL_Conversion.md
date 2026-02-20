@@ -116,13 +116,6 @@ With RL training, your chess engine now:
 - ✅ **Improves through self-play**
 - ✅ **Uses proper reward signals**
 
-## Paper Updates
-
-Your research paper should now state:
-- **"Reinforcement Learning Chess Engine"** ✅
-- **"Learns from game outcomes via Q-learning"** ✅
-- **"Uses exploration-exploitation strategy"** ✅
-- **"Trains through self-play and human games"** ✅
 
 ## Files Overview
 
@@ -142,11 +135,5 @@ Your research paper should now state:
 3. **Self-play**: Run `train_rl.py` for advanced training
 4. **Compare**: You can still use supervised learning if needed
 
-## Next Steps
 
-1. **Play more games** to generate training data
-2. **Experiment with hyperparameters** (epsilon, gamma, learning rate)
-3. **Add tactical puzzles** for evaluation
-4. **Implement tournament play** against other engines
 
-Your chess engine is now a proper reinforcement learning system! 🎉
